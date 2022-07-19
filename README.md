@@ -53,7 +53,7 @@ tentando nos aproximar ao máximo do que está no figma.
 - **Card** → Criação dos cards como demostrado acima com suas
   respectividas informações com titulo, foto, descrição, preço e um
   botão de adicionar ao carrinho
-- **Barra de pesquisa** →Com um input para colocar texto e um botão
+- **Barra de pesquisa** →Com um input para colocar grey-100o e um botão
   para pesquisar - apenas visual sem funcionalidade
 - **Carrinho de compras** → Criação do local onde será coloca
   posteriormente os produtos, iniciando vazio - apenas visual sem

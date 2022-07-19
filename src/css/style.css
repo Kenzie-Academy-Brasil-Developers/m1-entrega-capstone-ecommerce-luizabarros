@@ -1,0 +1,334 @@
+@charset "UTF-8";
+
+* {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --box-shadow: #00000040;
+    --grey-100: #292929;
+    --grey-50: #242424;
+    --grey-0: #f5f5f5;
+    --color-primary: #2e245e;
+    --color-secundary: #37268C;
+    --color-tag: #ffffff;
+    --scroll: #00000033;
+    --grey-60: #333333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.menu {
+    box-shadow: 0px 4px 30px -10px var(--box-shadow);
+}
+
+.menu .container {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70px;
+}
+
+.menu-titulo {
+    font-size: 1.8rem;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--grey-100); 
+}
+
+.menu-nav-bar ul {
+    display: flex; 
+    gap: 28px;
+}
+
+.menu-nav-bar ul a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(--grey-50);
+}
+
+.menu-nav-bar ul a:focus {
+    font-weight: 600; 
+    color: var(--grey-100); 
+}
+
+.menu-nav-bar ul a:hover, .menu-nav-bar ul a:focus {
+    text-decoration: underline 3px;
+}
+
+.vitrine {
+    margin: 52px 0;
+}
+
+.vitrine .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vitrine .secao-cards {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.secao-cards .card {
+    width: 280px;
+    min-height: 438px;
+    border: 2px solid var(--grey-0);
+}
+
+.secao-cards .card:hover {
+    border: 2px solid var(--color-secundary);
+}
+
+.card-img {
+    background: var(--grey-0);
+    text-align: center;
+}
+
+.card-img img {
+    height: 154px;
+    margin: 10px 0;
+    box-shadow: 1px 1px 8px var(--box-shadow);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.card-img img:hover {
+    transform: scale(102%);
+}
+
+.card-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+    padding: 10px;
+}
+
+.card-tag {
+    width: 73px;
+    height: 24px;
+    background: var(--color-primary);
+    padding: 12px 5px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color-tag);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-titulo {
+    font-size: 1.6rem;
+    line-height: 20px;
+    font-weight: 700;
+    color: var(--grey-100);
+    height: 40px;
+}
+
+.card-descricao {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 20px;
+    color: var(--grey-50);
+    height: 120px;
+}
+
+.card-preco {
+    font-size: 1.4rem;
+    line-height: 16px;
+    font-weight: 600;
+    color: var(--color-primary);
+    height: 16px;
+}
+
+.card-adicionar-carrinho {
+    border: 0;
+    padding: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--grey-50);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 16px;
+    text-align: justify;    
+    cursor: pointer;
+    height: 16px;
+}
+
+.card-adicionar-carrinho:hover {
+    color: var(--color-primary);
+    text-decoration: underline var(--color-primary);
+}
+
+.vitrine .secao-carrinho-pesquisa {
+    width: 20%;
+}
+
+.barra-pesquisa {
+    display: flex;
+    padding-bottom: 27px;
+}
+
+.barra-pesquisa-input {
+    border: 0;
+    outline: 0;
+    background: var(--grey-0);
+    width: 70%;
+    height: 52px;
+    padding: 10px;
+}
+
+.barra-pesquisa-botao {
+    width: 30%;
+    background: var(--color-secundary);
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-tag);
+    cursor: pointer;
+}
+
+.carrinho-titulo {
+    background: var(--color-secundary);
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 24px;
+    color: var(--color-tag);
+}
+
+.carrinho-vazio {
+    height: 214px;
+    background: var(--grey-0);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrinho-vazio-titulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--grey-100);
+}
+
+.carrinho-vazio-descricao {
+    color: var(--grey-50);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.carrinho-vazio.inativo {
+    display: none;
+}
+
+.carrinho-cheio.ativo {
+    display: block;
+}
+
+.carrinho-cheio-produtos {
+    height: 329px;
+    overflow-y: scroll;
+    background: var(--grey-0);
+    padding: 40px 14px;
+}
+
+.carrinho-cheio-produtos::-webkit-scrollbar {
+    width: 7px;
+}
+
+.carrinho-cheio-produtos::-webkit-scrollbar-thumb {
+    background: var(--scroll);
+    border-radius: 2px;
+}
+
+.carrinho-produto {
+    display: flex;
+    gap: 18px;
+    padding-bottom: 18px;
+    min-height: 92px;
+}
+
+.carrinho-produto-img {
+    align-self: center;
+}
+
+.carrinho-produto-img img {
+    height: 67px;
+}
+
+.carrinho-texto {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.carrinho-produto-titulo {
+    font-size: 1.2rem;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--grey-60);
+}
+
+.carrinho-produto-preco {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 16px;
+    color: var(--color-primary);
+}
+
+.carrinho-produto-remover {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 24px;
+    color: var(--grey-50);
+    cursor: pointer;
+}
+
+.carrinho-cheio-info-produtos {
+    height: 126px;
+    background: var(--grey-100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 28px 14px;
+}
+
+.quantidade-produtos {
+    padding-bottom: 24px;
+}
+
+.quantidade-produtos, .total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    line-height: 24px;
+    font-size: 1.4rem;
+    color: var(--color-tag);
+}
