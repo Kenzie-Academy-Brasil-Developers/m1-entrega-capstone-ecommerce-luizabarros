@@ -218,6 +218,10 @@
     display: block;
 }
 
+.carrinho-cheio.inativo {
+    display: none;
+}
+
 .carrinho-cheio-produtos {
     height: 329px;
     overflow-y: scroll;
