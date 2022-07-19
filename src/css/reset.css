@@ -45,3 +45,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+input.barra-pesquisa-input, button.card-adicionar-carrinho {
+    border: 0;
+    outline: 0;
+}

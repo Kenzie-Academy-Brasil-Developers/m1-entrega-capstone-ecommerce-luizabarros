@@ -18,6 +18,12 @@
     --grey-60: #333333;
 }
 
+.card-tag, .barra-pesquisa-botao, .carrinho-titulo, .carrinho-vazio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -37,9 +43,7 @@
 }
 
 .menu-titulo {
-    font-size: 1.8rem;
-    line-height: 24px;
-    font-weight: 700;
+    font: 700 1.8rem/24px 'Inter', sans-serif;
     color: var(--grey-100); 
 }
 
@@ -50,9 +54,7 @@
 
 .menu-nav-bar ul a {
     text-decoration: none;
-    font-size: 1.6rem;
-    line-height: 16px;
-    font-weight: 400;
+    font: 400 1.6rem/16px 'Inter', sans-serif;
     color: var(--grey-50);
 }
 
@@ -121,47 +123,33 @@
     height: 24px;
     background: var(--color-primary);
     padding: 12px 5px;
-    font-size: 1.2rem;
-    font-weight: 400;
+    font: 400 1.2em/16px 'Inter', sans-serif;
     color: var(--color-tag);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .card-titulo {
-    font-size: 1.6rem;
-    line-height: 20px;
-    font-weight: 700;
+    font: 700 1.6rem/20px 'Inter', sans-serif;
     color: var(--grey-100);
     height: 40px;
 }
 
 .card-descricao {
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 20px;
+    font: 400 1.4rem/20px 'Inter', sans-serif;
     color: var(--grey-50);
     height: 120px;
 }
 
 .card-preco {
-    font-size: 1.4rem;
-    line-height: 16px;
-    font-weight: 600;
+    font: 600 1.4rem/16px 'Inter', sans-serif;
     color: var(--color-primary);
     height: 16px;
 }
 
 .card-adicionar-carrinho {
-    border: 0;
     padding: 0;
-    outline: 0;
     background: transparent;
     color: var(--grey-50);
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 16px;
+    font: 500 1.4rem/16px 'Inter', sans-serif;
     text-align: justify;    
     cursor: pointer;
     height: 16px;
@@ -182,8 +170,6 @@
 }
 
 .barra-pesquisa-input {
-    border: 0;
-    outline: 0;
     background: var(--grey-0);
     width: 70%;
     height: 52px;
@@ -194,11 +180,7 @@
     width: 30%;
     background: var(--color-secundary);
     height: 52px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font: 500 1.2rem/16px 'Inter', sans-serif;
     color: var(--color-tag);
     cursor: pointer;
 }
@@ -207,37 +189,25 @@
     background: var(--color-secundary);
     width: 100%;
     height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.4rem;
-    line-height: 24px;
+    font: 700 1.4rem/24px 'Inter', sans-serif;
     color: var(--color-tag);
 }
 
 .carrinho-vazio {
     height: 214px;
     background: var(--grey-0);
-    display: flex;
     flex-direction: column;
     gap: 5px;
-    justify-content: center;
-    align-items: center;
 }
 
 .carrinho-vazio-titulo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 24px;
+    font: 700 1.8rem/24px 'Inter', sans-serif;
     color: var(--grey-100);
 }
 
 .carrinho-vazio-descricao {
     color: var(--grey-50);
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 16px;
+    font: 400 1.4rem/16px 'Inter', sans-serif;
 }
 
 .carrinho-vazio.inativo {
@@ -264,8 +234,11 @@
     border-radius: 2px;
 }
 
-.carrinho-produto {
+.carrinho-produto, .carrinho-texto {
     display: flex;
+}
+
+.carrinho-produto {
     gap: 18px;
     padding-bottom: 18px;
     min-height: 92px;
@@ -279,24 +252,22 @@
     height: 67px;
 }
 
-.carrinho-texto {
+.carrinho-texto, .carrinho-produto-remover {
     text-align: justify;
-    display: flex;
+}
+
+.carrinho-texto {
     flex-direction: column;
     gap: 8px;
 }
 
 .carrinho-produto-titulo {
-    font-size: 1.2rem;
-    line-height: 24px;
-    font-weight: 700;
+    font: 700 1.2rem/24px 'Inter', sans-serif;
     color: var(--grey-60);
 }
 
 .carrinho-produto-preco {
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 16px;
+    font: 600 1rem/16px 'Inter', sans-serif;
     color: var(--color-primary);
 }
 
@@ -304,17 +275,18 @@
     border: 0;
     padding: 0;
     background: transparent;
-    font-size: 1rem;
-    text-align: justify;
-    line-height: 24px;
+    font: 500 1rem/24px 'Inter', sans-serif;
     color: var(--grey-50);
     cursor: pointer;
+}
+
+.carrinho-cheio-info-produtos, .quantidade-produtos, .total {
+    display: flex;
 }
 
 .carrinho-cheio-info-produtos {
     height: 126px;
     background: var(--grey-100);
-    display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 28px 14px;
@@ -325,10 +297,7 @@
 }
 
 .quantidade-produtos, .total {
-    display: flex;
     justify-content: space-between;
-    font-weight: 600;
-    line-height: 24px;
-    font-size: 1.4rem;
+    font: 600 1.4rem/24px 'Inter', sans-serif;
     color: var(--color-tag);
 }
